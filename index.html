@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Gallary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: linear-gradient(to left, rgb(255, 87, 26), rgb(115, 36, 0))
+        }
+
+        *{
+            margin:0%;
+            padding: 0%;
+            font-family: 'Playfair Display', serif;
+            box-sizing: border-box;
+        }
+
+        #flex-container{
+            width: 100%;
+            height: 700px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+
+        #left-flex{
+            color: white;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #right-flex{
+            width: 50%;
+            height: 500px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 100;
+            gap: 10px;
+        }
+
+        h1{
+            font-size: 70px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        #grid-item-1{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            background-image: url("image1.jpg");
+            background-size: cover;
+            color: white;
+        }
+
+        #grid-item-2{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            background-image: url("image2.jpg");
+            background-size: cover;
+            color: white;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        #grid-item-3{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            background-image: url("image3.jpg");
+            background-size: cover;
+            color: white;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        #grid-item-4{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            background-image: url("image4.jpg");
+            background-size: cover;
+            color: white;
+        }
+
+        #grid-item-5{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            background-image: url("image5.jpg");
+            background-size: cover;
+            color: white;
+        }
+
+        #grid-item-6{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            background-image: url("image6.jpg");
+            background-size: cover;
+            color: white;
+        }
+
+        #grid-item-7{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            background-image: url("image7.jpg");
+            background-size: cover;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="flex-container">
+        <div id="left-flex">
+            <h1>Gallary</h1>
+            <p>Check out our latest moments!</p>
+        </div>
+        <div id="right-flex">
+            <div class="grid-item" id="grid-item-1">Image 1</div>
+            <div class="grid-item" id="grid-item-2">Image 2</div>
+            <div class="grid-item" id="grid-item-3">Image 3</div>
+            <div class="grid-item" id="grid-item-4">Image 4</div>
+            <div class="grid-item" id="grid-item-5">Image 5</div>
+            <div class="grid-item" id="grid-item-6">Image 6</div>
+            <div class="grid-item" id="grid-item-7">Image 7</div>
+        </div>
+    </div>
+</body>
+</html>
